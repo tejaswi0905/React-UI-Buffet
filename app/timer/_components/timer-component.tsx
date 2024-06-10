@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import useTimer from "../_hooks/use-timer-hook";
 export const TimerComponent = () => {
   const { isTimerRunning, startTimer, stopTimer, seconds } = useTimer(5);
@@ -9,7 +10,8 @@ export const TimerComponent = () => {
       </div>
       <div className="flex justify-between">
         <button
-          className="border bg-gray-100 mr-1"
+          className="border bg-gray-100 mr-1 rounded-md p-2"
+          disabled={isTimerRunning}
           onClick={() => {
             startTimer();
           }}
@@ -17,7 +19,8 @@ export const TimerComponent = () => {
           Start Timer
         </button>
         <button
-          className="border bg-gray-100 ml-1"
+          className="border bg-gray-100 ml-1 rounded-md p-2"
+          disabled={!isTimerRunning}
           onClick={() => {
             stopTimer();
           }}
