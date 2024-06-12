@@ -1,11 +1,16 @@
 import * as z from "zod";
 
-const MovieTitleSchema = z.object({
-  title: z.string(),
+export const InputSchema = z.object({
+  title: z
+    .string()
+    .regex(
+      /^[a-zA-Z0-9\s]+$/,
+      "Input can only contain letters, numbers, and spaces"
+    ),
 });
 
-export const searchMovie = (title: z.infer<typeof MovieTitleSchema>) => {
-  const validatedFields = MovieTitleSchema.safeParse(title);
+export const searchMovie = async (title: z.infer<typeof InputSchema>) => {
+  const validatedFields = InputSchema.safeParse(title);
   if (!validatedFields.success) {
     return { error: "Invalid fields" };
   }
@@ -13,18 +18,14 @@ export const searchMovie = (title: z.infer<typeof MovieTitleSchema>) => {
   const movieTitle = validatedFields.data.title;
 
   try {
-    fetch(
+    const response = await fetch(
       `https://api.themoviedb.org/3/search/movie?query=${movieTitle}&api_key=7a25e2297850f818bae44d3f3efd8311`
-    )
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        console.log(data.total_results);
-      });
+    );
+    const data = await response.json();
+    console.log(data);
+    return data;
   } catch (e: any) {
     console.log(e);
-  } finally {
-    return { success: "Search success" };
+    return { error: "Error in fetching data." };
   }
 };
