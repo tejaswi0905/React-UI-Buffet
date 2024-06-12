@@ -3,6 +3,7 @@
 import { useRecoilState, useRecoilValue } from "recoil";
 
 import { AccordionItem } from "./accordion-item";
+import { AccordionContent } from "./accordion-content";
 import {
   openIndexState,
   accordionItemsArray,
@@ -19,18 +20,25 @@ export const Accordion = () => {
   };
 
   return (
-    <div>
+    <div className="p-4">
       {items.map((item, index) => {
-        return (
-          <AccordionItem
-            key={index}
-            title={item.title}
-            content={item.content}
-            isOpen={openIndex === index}
-            onClick={() => {
-              handleClick(index);
-            }}
+        const content = (
+          <AccordionContent
+            subHeading={item.content.subheading}
+            textContent={item.content.textContent}
           />
+        );
+        return (
+          <div key={index} className="flex justify-center">
+            <AccordionItem
+              title={item.title}
+              content={content}
+              isOpen={openIndex === index}
+              onClick={() => {
+                handleClick(index);
+              }}
+            />
+          </div>
         );
       })}
     </div>

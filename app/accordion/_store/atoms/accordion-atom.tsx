@@ -2,7 +2,10 @@ import { atom } from "recoil";
 
 export type AccordionMain = {
   title: String;
-  content: React.ReactNode;
+  content: {
+    subheading: String;
+    textContent: String;
+  };
 };
 
 export const openIndexState = atom<number | null>({
@@ -15,30 +18,24 @@ export const accordionItemsArray = atom<AccordionMain[]>({
   default: [
     {
       title: "Section 1",
-      content: (
-        <div>
-          <h4>subheading</h4>
-          <p>This is a paragraph inside section 1.</p>
-        </div>
-      ),
+      content: {
+        subheading: "Subheading",
+        textContent: "Some content in section 1.",
+      },
     },
     {
       title: "Section 2",
-      content: (
-        <div>
-          <h4>Subheading</h4>
-          <p>Some more content in section 2.</p>
-        </div>
-      ),
+      content: {
+        subheading: "Subheading",
+        textContent: "Some content in section 2.",
+      },
     },
     {
       title: "Section 3",
-      content: (
-        <div>
-          <h4>Subheading</h4>
-          <p>Some more content in section 3.</p>
-        </div>
-      ),
+      content: {
+        subheading: "Subheading",
+        textContent: "Some content in section 3.",
+      },
     },
   ],
 });
