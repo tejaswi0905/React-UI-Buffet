@@ -15,6 +15,8 @@ etc... Much more coming in the future, I will keep updating on this project.
 
 Beyond the Plate: Security and User Management
 
+This project uses Recoil for state management, From what I observed, the industry is slowly moving from redux to recoil, so I felt this will be a good chance for me to learn recoil.
+
 This project goes further than just implementing these components. I've focused on:
 
 Customization: Many components allow users to configure styles and behaviors for a personalized experience.
