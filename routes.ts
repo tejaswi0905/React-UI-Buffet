@@ -42,4 +42,4 @@ export const generalProtectedRoutes = ["/dummy"];
  * @type {string}
  */
 
-export const DEFAULT_LOGIN_REDIRECT = "/settings";
+export const DEFAULT_LOGIN_REDIRECT = "/";

@@ -6,7 +6,7 @@ const HomePage = () => {
       <header className="flex justify-between items-center bg-gradient-to-r from-gray-100 to-indigo-200 px-6 py-4 rounded-lg shadow-md">
         <div className="flex flex-col items-center">
           <span className="text-gray-900 font-semibold text-lg">User Name</span>
-          <Link href="/login">
+          <Link href="/auth/login">
             <span className="text-gray-700 hover:text-blue-600 mt-1">
               Login
             </span>
@@ -56,7 +56,10 @@ const HomePage = () => {
           </ul>
         </aside>
         <main className="w-3/4 ml-8 bg-gradient-to-r from-gray-100 to-indigo-200 px-6 py-8 rounded-lg shadow-md">
-          {/* Add your main content here */}
+          <p>
+            /Todo main content, Add user details Describe project and provide my
+            social links/
+          </p>
         </main>
       </div>
     </div>

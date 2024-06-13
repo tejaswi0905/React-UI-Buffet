@@ -22,7 +22,7 @@ export const CardWrapper = ({
 }: CardWrapperProps) => {
   return (
     <div className="flex justify-center">
-      <Card className="w-ful md:w-[400px] shadow-md">
+      <Card className="w-ful h-full md:w-[400px] shadow-md">
         <CardHeader>
           <Header label={headerLabel}></Header>
         </CardHeader>
