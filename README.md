@@ -34,6 +34,8 @@ Why This Project?
 React UI Buffet serves as a valuable tool for:
 
 Showcasing My Skills: This project is a talking point during interviews, demonstrating my proficiency in React, NextAuth, and secure user management practices.
+
 Component Design Practice: Building reusable and maintainable components is a key skill, and this project provides practical experience.
+
 Exploring Features: Experimenting with various functionalities allows me to solidify my understanding of React and its capabilities.
 React UI Buffet is my way of showcasing my ability to build secure, interactive, and feature-rich React components. 
