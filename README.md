@@ -27,7 +27,32 @@ Performance Optimization: I've prioritized efficient code to keep the user inter
 
 Secure Access with NextAuth:
 React UI Buffet leverages NextAuth to implement robust OAuth (Open Authorization) for secure user login and management. This ensures user privacy and allows for seamless integration with various authentication providers.
-
+Key Features:
+- 🔐 Next-auth v5 (Auth.js)
+- 🚀 Next.js 14 with server actions
+- 🔑 Credentials Provider
+- 🌐 OAuth Provider (Social login with Google & GitHub)
+- 🔒 Forgot password functionality
+- ✉️ Email verification
+- 📱 Two factor verification (2FA)
+- 👥 User roles (Admin & User)
+- 🔓 Login component (Opens in redirect or modal)
+- 📝 Register component
+- 🤔 Forgot password component
+- ✅ Verification component
+- ⚠️ Error component
+- 🔘 Login button
+- 🚪 Logout button
+- 🚧 Role Gate
+- 📈 Extending & Exploring next-auth session
+- 🔄 Exploring next-auth callbacks
+- 🖥️ Example with server component
+- 💻 Example with client component
+- 👑 Render content for admins using RoleGate component
+- 🛡️ Protect API Routes for admins only
+- 🔐 Protect Server Actions for admins only
+- 🔔 Enable/disable two-factor auth in Settings page(for development purposes only)
+- 🔄 Change user role in Settings page (for development purposes only)
 Authorization and Role-Based Access Control (RBAC):
 The project goes beyond basic login by incorporating authorization and RBAC. This allows for control over user access to different features and functionalities based on their assigned roles. This enhances security and provides a good user experience depending on permissions.
 
