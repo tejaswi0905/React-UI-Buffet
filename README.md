@@ -7,10 +7,15 @@ A Secure and Interactive Feast
 React UI Buffet offers a variety of interactive components, including:
 
 Accordions: Create collapsible sections that reveal content on click, ideal for FAQs or detailed information.
+
 Auto-complete Search: Help users find what they need quickly with a search bar that suggests options as they type.
+
 Sticky Scrolling: Keep important elements like navigation bars or sidebars in view even as users scroll down the page.
+
 Dropdown Menus: Provide users with a clean and efficient way to access options from a list.
+
 Smooth Animations: Enhance user experience with subtle and visually appealing animations for transitions and interactions.
+
 etc... Much more coming in the future, I will keep updating on this project.
 
 Beyond the Plate: Security and User Management
