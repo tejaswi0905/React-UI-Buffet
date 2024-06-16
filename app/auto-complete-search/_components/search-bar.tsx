@@ -6,9 +6,10 @@ import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
 interface SearchBarProps {
   query: string;
   setQuery: React.Dispatch<React.SetStateAction<string>>;
+  setFocus: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export const SearchBar = ({ query, setQuery }: SearchBarProps) => {
+export const SearchBar = ({ query, setQuery, setFocus }: SearchBarProps) => {
   const inputEl = useRef<HTMLInputElement | null>(null);
 
   useEffect(() => {
@@ -23,6 +24,9 @@ export const SearchBar = ({ query, setQuery }: SearchBarProps) => {
         value={query}
         onChange={(e) => {
           setQuery(e.target.value);
+        }}
+        onFocus={() => {
+          setFocus(true);
         }}
         ref={inputEl}
       />

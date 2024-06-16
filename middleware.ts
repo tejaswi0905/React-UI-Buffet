@@ -1,6 +1,4 @@
 import NextAuth from "next-auth";
-import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server";
 
 import authConfig from "./auth.config";
 import {
@@ -10,6 +8,7 @@ import {
   publicRoutes,
   generalProtectedRoutes,
 } from "@/routes";
+import { nullable } from "zod";
 
 const { auth } = NextAuth(authConfig);
 
@@ -24,6 +23,10 @@ export default auth((req): any => {
   const isGeneralProtectedRoute = generalProtectedRoutes.includes(
     nextUrl.pathname
   );
+
+  if (isPublicRoute) {
+    return null;
+  }
 
   if (isGeneralProtectedRoute) {
     console.log("inside dummy");

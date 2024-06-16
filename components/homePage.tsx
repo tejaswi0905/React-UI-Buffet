@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+
 const HomePage = () => {
   return (
     <div className="container mx-auto px-6 py-10 bg-gradient-to-r from-indigo-200 to-indigo-300 min-h-screen">
@@ -16,7 +17,7 @@ const HomePage = () => {
           react-ui-buffet
         </h1>
         <div className="flex flex-col items-center">
-          <Link href="https://github.com/your-github-username">
+          <Link href="https://github.com/tejaswi0905">
             <span className="text-gray-700 hover:text-blue-600">GitHub</span>
           </Link>
         </div>
