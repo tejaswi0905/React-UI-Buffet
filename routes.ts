@@ -6,7 +6,7 @@
 export const publicRoutes = [
   "/",
   "/auth/new-verification",
-  "/accordoin",
+  "/accordion",
   "/auto-complete-search",
   "/timer",
 ];
