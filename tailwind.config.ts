@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      width: {
+        "calc-33-20": "calc(33.33% - 20px)",
+      },
       colors: {
         autoCompleteSearch: {
           background: "#ccccff",
